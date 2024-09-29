@@ -72,3 +72,5 @@ MonsterId = {
     "Risen Chameleos": 2073,
     "Risen Teostra": 2075
 }
+
+HuntAllTargets = 5 # Target type for hunting every monster

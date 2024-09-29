@@ -164,3 +164,7 @@ cython_debug/
 # Monster Hunter Questfolder
 Questexports/
 Output/
+
+# Test files
+testdata.py
+testmain.py
