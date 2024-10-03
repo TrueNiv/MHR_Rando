@@ -75,7 +75,7 @@ def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postg
         jsonData["QuestData"]["Icons"] = [random.randrange(0, 120), random.randrange(0, 120), random.randrange(0, 120),
                                           random.randrange(0, 120), random.randrange(0, 120)]
     else:
-        jsonData["QuestText"]["QuestInfo"][1]["Target"] = f"Hunt {i + 1} Monsters"
+        jsonData["QuestText"]["QuestInfo"][1]["Target"] = f"Hunt {amount} Monsters"
         jsonData["QuestData"]["Icons"] = [999, 999, 999, 999, 999]
 
     return jsonData
