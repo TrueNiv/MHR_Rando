@@ -67,15 +67,17 @@ def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postg
         jsonData["EnemyData"]["Monsters"][i]["SetName"] = f"{map[1]}{spawnArea}"
 
 
-    #Set Monster Icons to random icons
-    jsonData["QuestData"]["Icons"] = [random.randrange(0, 120), random.randrange(0, 120), random.randrange(0, 120),
-                                      random.randrange(0, 120), random.randrange(0, 120)]
 
     # Adjust Monster Text
     if questDetails == RandoSettings.QuestInfo.ShowMonster:
         jsonData["QuestText"]["QuestInfo"][1]["Target"] = questText
+        # Set Monster Icons to random icons
+        jsonData["QuestData"]["Icons"] = [random.randrange(0, 120), random.randrange(0, 120), random.randrange(0, 120),
+                                          random.randrange(0, 120), random.randrange(0, 120)]
     else:
         jsonData["QuestText"]["QuestInfo"][1]["Target"] = f"Hunt {i + 1} Monsters"
+        jsonData["QuestData"]["Icons"] = [999, 999, 999, 999, 999]
+
     return jsonData
 
 
