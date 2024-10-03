@@ -168,3 +168,6 @@ Output/
 # Test files
 testdata.py
 testmain.py
+
+# Notes
+todo.txt

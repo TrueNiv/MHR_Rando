@@ -1,3 +1,5 @@
+from enum import Enum
+
 MonsterId = {
     "Rathian": 1,
     "Rathalos": 2,
@@ -68,9 +70,236 @@ MonsterId = {
     "Apex Zinogre": 1849,
     "Apex Arzuros": 1852,
     "Apex Mizutsune": 1874,
-    "Risen Kushala Daora": 2072,
-    "Risen Chameleos": 2073,
-    "Risen Teostra": 2075
+    #"Risen Kushala Daora": 2072, Doesn't work
+    "Risen Chameleos": 2073
+    #"Risen Teostra": 2075 Doesn't work
+}
+
+PreMRIds = {
+    "Rathian": 1,
+    "Rathalos": 2,
+    "Khezu": 3,
+    "Basarios": 4,
+    "Diablos": 7,
+    "Rajang": 23,
+    "Kushala Daora": 24,
+    "Chameleos": 25,
+    "Teostra": 27,
+    "Nargacuga": 37,
+    "Barioth": 42,
+    "Barroth": 44,
+    "Royal Ludroth": 47,
+    "Great Baggi": 54,
+    "Zinogre": 57,
+    "Great Wroggi": 59,
+    "Arzuros": 60,
+    "Lagombi": 61,
+    "Volvidon": 62,
+    "Mizutsune": 82,
+    "Magnamalo": 89,
+    "Bishaten": 90,
+    "Aknosom": 91,
+    "Tetranadon": 92,
+    "Somnacanth": 93,
+    "Rakna-Kadaki": 94,
+    "Almudron": 95,
+    "Wind Serpent Ibushi": 96,
+    "Goss Harag": 97,
+    "Great Izuchi": 98,
+    "Thunder Serpent Narwa": 99,
+    "Anjanath": 100,
+    "Pukei-Pukei": 102,
+    "Kulu-Ya-Ku": 107,
+    "Jyuratodus": 108,
+    "Tobi-Kadachi": 109,
+    "Bazelgeuse": 118,
+    "Crimson Glow Valstrax": 1366,
+    "Apex Rathian": 1793,
+    "Apex Rathalos": 1794,
+    "Apex Diablos": 1799,
+    "Apex Zinogre": 1849,
+    "Apex Arzuros": 1852,
+    "Apex Mizutsune": 1874,
+}
+
+NoPostgameId = {
+    "Rathian": 1,
+    "Rathalos": 2,
+    "Khezu": 3,
+    "Basarios": 4,
+    "Diablos": 7,
+    "Daimyo Hermitaur": 19,
+    "Shogun Ceanataur": 20,
+    "Rajang": 23,
+    "Kushala Daora": 24,
+    "Chameleos": 25,
+    "Teostra": 27,
+    "Tigrex": 32,
+    "Nargacuga": 37,
+    "Barioth": 42,
+    "Barroth": 44,
+    "Royal Ludroth": 47,
+    "Great Baggi": 54,
+    "Zinogre": 57,
+    "Great Wroggi": 59,
+    "Arzuros": 60,
+    "Lagombi": 61,
+    "Volvidon": 62,
+    "Gore Magala": 71,
+    "Shagaru Magala": 72,
+    "Seregios": 77,
+    "Astalos": 81,
+    "Mizutsune": 82,
+    "Magnamalo": 89,
+    "Bishaten": 90,
+    "Aknosom": 91,
+    "Tetranadon": 92,
+    "Somnacanth": 93,
+    "Rakna-Kadaki": 94,
+    "Almudron": 95,
+    "Wind Serpent Ibushi": 96,
+    "Goss Harag": 97,
+    "Great Izuchi": 98,
+    "Thunder Serpent Narwa": 99,
+    "Anjanath": 100,
+    "Pukei-Pukei": 102,
+    "Kulu-Ya-Ku": 107,
+    "Jyuratodus": 108,
+    "Tobi-Kadachi": 109,
+    "Bazelgeuse": 118,
+    "Malzeno": 132,
+    "Lunagaron": 133,
+    "Garangolm": 134,
+    "Espinas": 136,
+    "Blood Orange Bishaten": 346,
+    "Aurora Somnacanth": 349,
+    "Pyre Rakna-Kadaki": 350,
+    "Magma Almudron": 351,
+    "Crimson Glow Valstrax": 1366,
+    "Apex Rathian": 1793,
+    "Apex Rathalos": 1794,
+    "Apex Diablos": 1799,
+    "Apex Zinogre": 1849,
+    "Apex Arzuros": 1852,
+    "Apex Mizutsune": 1874,
+}
+
+Icons = {
+    "Rathian": 0,
+    "Rathalos": 1,
+    "Khezu": 2,
+    "Basarios": 3,
+    "Diablos": 4,
+    "Daimyo Hermitaur": 43,
+    "Shogun Ceanataur": 44,
+    "Rajang": 5,
+    "Kushala Daora": 6,
+    "Chameleos": 7,
+    "Teostra": 8,
+    "Tigrex": 9,
+    "Nargacuga": 10,
+    "Barioth": 11,
+    "Barroth": 12,
+    "Royal Ludroth": 13,
+    "Great Baggi": 14,
+    "Zinogre": 15,
+    "Great Wroggi": 16,
+    "Arzuros": 17,
+    "Lagombi": 18,
+    "Volvidon": 19,
+    "Gore Magala": 47,
+    "Shagaru Magala": 48,
+    "Seregios": 49,
+    "Astalos": 50,
+    "Mizutsune": 20,
+    "Magnamalo": 22,
+    "Bishaten": 23,
+    "Aknosom": 24,
+    "Tetranadon": 25,
+    "Somnacanth": 26,
+    "Rakna-Kadaki": 27,
+    "Almudron": 28,
+    "Wind Serpent Ibushi": 29,
+    "Goss Harag": 30,
+    "Great Izuchi": 31,
+    "Thunder Serpent Narwa": 32,
+    "Anjanath": 33,
+    "Pukei-Pukei": 34,
+    "Kulu-Ya-Ku": 25,
+    "Jyuratodus": 36,
+    "Tobi-Kadachi": 37,
+    "Bazelgeuse": 38,
+    "Malzeno": 58,
+    "Lunagaron": 59,
+    "Garangolm": 60,
+    "Espinas": 62,
+    "Blood Orange Bishaten": 53,
+    "Aurora Somnacanth": 54,
+    "Pyre Rakna-Kadaki": 55,
+    "Magma Almudron": 56,
+    "Flaming Espinas": 63,
+    "Gold Rathian": 41,
+    "Silver Rathalos": 42,
+    "Lucent Nargacuga": 46,
+    "Violet Mizutsune": 51,
+    "Furious Rajang": 45,
+    "Chaotic Gore Magala": 64,
+    "Crimson Glow Valstrax": 21,
+    "Scorned Magnamalo": 52,
+    "Seething Bazelgeuse": 57,
+    "Primordial Malzeno": 114,
+    "Apex Rathian": 69,
+    "Apex Rathalos": 70,
+    "Apex Diablos": 71,
+    "Apex Zinogre": 72,
+    "Apex Arzuros": 73,
+    "Apex Mizutsune": 74,
+    "Risen Kushala Daora": 114,
+    "Risen Chameleos": 114,
+    "Risen Teostra": 114,
+    "Velkhana": 65,
+    "Amatsu": 66
 }
 
 HuntAllTargets = 5 # Target type for hunting every monster
+
+# To make a monster count as a target, mark its spawn condition as Spawn Always (1) or as Slot 3 Free (4)
+SpawnAlways = 1
+Slot3Free = 4
+Optional = 14
+
+SlotParameter = [100, 100, 35, 35, 30, 0, 0]
+
+#Quest Symbols
+QuestionMark = 112
+QuestObjectiveIcon = 113
+SupplyBox = 114
+
+Maps = {
+    1: (13, "randoShrine"),
+    2: (12, "randoSandy"),
+    3: (14, "randoFlooded"),
+    4: (12, "randoFrost"),
+    5: (14, "randoLava"),
+    6: (1, "randoInfernal"),
+    10: (1, "randoArena"),
+    11: (1, "randoCoral"),
+    12: (11, "randoJungle"),
+    13: (14, "randoCitadel"),
+    14: (1, "randoForlorn"),
+    15: (1, "randoYawning")
+}
+
+
+ShrineRuins = (13, "randoShrine")
+SandyPlains = (12, "randoSandy")
+FloodedForest = (14, "randoFlooded")
+FrostCaverns = (12, "randoFrost")
+LavaCaverns = (14, "randoLava")
+Jungle = (11, "randoJungle")
+Citadel = (14, "randoCitadel")
+InfernalSprings = (1, "randoInfernal")
+Arena = (1, "randoArena")
+CoralPalace = (1, "randoCoral")
+ForlornArena = (1, "randoForlorn")
+YawningAbyss = (1, "randoYawning")
