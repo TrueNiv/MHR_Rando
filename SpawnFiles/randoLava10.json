@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 5,
+  "Setters": [
+    {
+      "SetName": "randoLava10",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 10,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 191.879501,
+            "Y": 4.943633,
+            "Z": -427.885803
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

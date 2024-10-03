@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 11,
+  "Setters": [
+    {
+      "SetName": "randoCoral1",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 1,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 6.070927,
+            "Y": 10.0,
+            "Z": -16.965151
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

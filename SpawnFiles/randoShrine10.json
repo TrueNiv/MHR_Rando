@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 1,
+  "Setters": [
+    {
+      "SetName": "randoShrine10",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 10,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 193.801407,
+            "Y": 112.463501,
+            "Z": -453.55661
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

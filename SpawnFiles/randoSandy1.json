@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 2,
+  "Setters": [
+    {
+      "SetName": "randoSandy1",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 1,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 116.848999,
+            "Y": -24.34889,
+            "Z": -157.004196
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

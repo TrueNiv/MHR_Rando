@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 4,
+  "Setters": [
+    {
+      "SetName": "randoFrost2",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 2,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 204.036301,
+            "Y": 26.578979,
+            "Z": -104.513802
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

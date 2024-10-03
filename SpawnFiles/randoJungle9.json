@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 12,
+  "Setters": [
+    {
+      "SetName": "randoJungle9",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 9,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 89.913979,
+            "Y": 4.737699,
+            "Z": -141.563293
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

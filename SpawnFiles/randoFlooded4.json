@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 3,
+  "Setters": [
+    {
+      "SetName": "randoFlooded4",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 4,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 201.9561,
+            "Y": 37.38839,
+            "Z": 209.756897
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}
