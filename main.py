@@ -100,7 +100,10 @@ for filename in os.listdir(ImportPath):
 
     if os.path.isfile(f):
         data = JsonHandler.ImportQuest(f)
-        data = RandomizeData(data, MonsterPlacement, QuestDetails, MonsterAmount, PostgameMonsters)
+        try:
+            data = RandomizeData(data, MonsterPlacement, QuestDetails, MonsterAmount, PostgameMonsters)
+        except Exception as e:
+            print(f"Skipping quest {data["QuestID"]} due to an error in generation")
         JsonHandler.ExportQuest(os.path.join(ExportPath, filename), data)
 print("Generation finished.")
 print(f"Saved files in {ExportPath}")
