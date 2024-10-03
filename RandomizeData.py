@@ -61,6 +61,9 @@ def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postg
                 jsonData["QuestData"]["Monsters"][i]["SpawnCondition"] = MonsterIDs.SpawnAlways
             else:
                 jsonData["QuestData"]["Monsters"][i]["SpawnCondition"] = MonsterIDs.Slot3Free
+        elif mapId in MonsterIDs.Arenas:
+            # Disable extra monsters if in an arena
+            jsonData["QuestData"]["Monsters"][i]["SpawnCondition"] = MonsterIDs.NeverSpawn
         else:
             jsonData["QuestData"]["Monsters"][i]["SpawnCondition"] = MonsterIDs.Optional
 
@@ -79,7 +82,7 @@ def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postg
         jsonData["QuestData"]["Icons"] = [random.randrange(0, 120), random.randrange(0, 120), random.randrange(0, 120),
                                           random.randrange(0, 120), random.randrange(0, 120)]
     else:
-        jsonData["QuestText"]["QuestInfo"][1]["Target"] = f"Hunt {amount} Monsters"
+        jsonData["QuestText"]["QuestInfo"][1]["Target"] = f"Hunt {amount+1} Monsters"
         jsonData["QuestData"]["Icons"] = [999, 999, 999, 999, 999]
 
     return jsonData

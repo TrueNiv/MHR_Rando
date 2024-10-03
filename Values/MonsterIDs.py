@@ -267,6 +267,7 @@ HuntAllTargets = 5 # Target type for hunting every monster
 SpawnAlways = 1
 Slot3Free = 4
 Optional = 14
+NeverSpawn = 0
 
 SlotParameter = [100, 100, 35, 35, 30, 0, 0]
 
@@ -290,6 +291,7 @@ Maps = {
     15: (1, "randoYawning")
 }
 
+Arenas = (9, 10, 11, 14, 15)
 
 ShrineRuins = (13, "randoShrine")
 SandyPlains = (12, "randoSandy")
