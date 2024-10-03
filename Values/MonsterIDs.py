@@ -281,7 +281,7 @@ Maps = {
     3: (14, "randoFlooded"),
     4: (12, "randoFrost"),
     5: (14, "randoLava"),
-    6: (1, "randoInfernal"),
+    9: (1, "randoInfernal"),
     10: (1, "randoArena"),
     11: (1, "randoCoral"),
     12: (11, "randoJungle"),

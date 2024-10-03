@@ -13,8 +13,12 @@ def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postg
     # Set the target to hunting all monsters
     jsonData["QuestData"]["TargetTypes"] = [5, 0]
 
-    mapId = jsonData["QuestData"]["Map"]
-    map = MonsterIDs.Maps[mapId]
+    try:
+        mapId = jsonData["QuestData"]["Map"]
+        map = MonsterIDs.Maps[mapId]
+    except Exception as e:
+        print(f"Skipping quest {jsonData["QuestID"]} due to map {mapId} not being a known id.")
+        return jsonData
 
     # Pick the amount of monsters to fight
     if monsterAmount == RandoSettings.MonsterAmount.AlwaysOne:
