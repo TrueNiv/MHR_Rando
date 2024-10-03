@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 13,
+  "Setters": [
+    {
+      "SetName": "randoCitadel7",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 7,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": -32.1828,
+            "Y": 116.9972,
+            "Z": -349.080688
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

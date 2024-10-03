@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 3,
+  "Setters": [
+    {
+      "SetName": "randoFlooded7",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 7,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 179.141693,
+            "Y": 35.952782,
+            "Z": -67.168259
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+﻿{
+  "QuestID": -1,
+  "Map": 3,
+  "Setters": [
+    {
+      "SetName": "randoFlooded12",
+      "Spawns": [
+        {
+          "Chance": 100,
+          "Area": 12,
+          "SubSpawn": 20,
+          "Coordinates": {
+            "X": 59.459599,
+            "Y": 59.28146,
+            "Z": -41.286411
+          }
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        },
+        {
+          "Chance": 0,
+          "Area": 0,
+          "SubSpawn": 0,
+          "Coordinates": null
+        }
+      ]
+    }
+  ]
+}
