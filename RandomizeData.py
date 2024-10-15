@@ -73,6 +73,11 @@ def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postg
         spawnArea = random.randrange(1, map[0] + 1)
         jsonData["EnemyData"]["Monsters"][i]["SetName"] = f"{map[1]}{spawnArea}"
 
+        # Adjust stats so that extra monsters in arena quest that normally have less monsters also work
+        jsonData["EnemyData"]["Monsters"][i]["HealthTable"] = jsonData["EnemyData"]["Monsters"][1]["HealthTable"]
+        jsonData["EnemyData"]["Monsters"][i]["AttackTable"] = jsonData["EnemyData"]["Monsters"][1]["HealthTable"]
+        jsonData["EnemyData"]["Monsters"][i]["StaminaTable"] = jsonData["EnemyData"]["Monsters"][1]["StaminaTable"]
+
 
 
     # Adjust Monster Text
