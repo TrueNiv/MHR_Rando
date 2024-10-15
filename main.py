@@ -4,6 +4,21 @@ import JsonHandler
 from Settings import RandoSettings
 from RandomizeData import RandomizeData
 
+def IntInput(prompt):
+    choice = -1
+    firstit = True
+    while not (0 < choice <= 255):
+        if not firstit:
+            print("The number isn't in the required range.")
+        while True:
+            try:
+                choice = int(input(prompt))
+                break
+            except ValueError:
+                print("Please enter a valid number")
+        firstit = False
+    return choice
+
 
 ImportPath = input("Enter quest file directory:\n")
 if not os.path.isdir(ImportPath):
@@ -63,6 +78,24 @@ try:
 except:
     PostgameMonsters = RandoSettings.InlcudePostgame.Include
 
+print("\n"
+      "How do you want to treat monster sizes?.\n"
+      "Default - All monsters have a normal size.\n"
+      "Shuffled - Set a min and max for monster sizes\n\n"
+      "0 = Default (Default)\n1 = Shuffled")
+inp = input("Enter a number: ").strip(' ')
+try:
+    MonsterSize = RandoSettings.SizeChanges(int(inp))
+except:
+    MonsterSize = RandoSettings.SizeChanges.Default
+
+if MonsterSize == RandoSettings.SizeChanges.Shuffled:
+    MinSize = IntInput("Enter minimum size (0-255): ")
+    MaxSize = IntInput("Enter maximum size (0-255): ")
+else:
+    MinSize = 100
+    MaxSize = 100
+
 
 
 print("Generating for the following settings:")
@@ -93,6 +126,11 @@ if PostgameMonsters == RandoSettings.InlcudePostgame.Include:
 if PostgameMonsters == RandoSettings.InlcudePostgame.Exclude:
     print("Excluding postgame monsters")
 
+if MonsterSize == RandoSettings.SizeChanges.Default:
+    print("Using default monster sizes")
+if MonsterSize == RandoSettings.SizeChanges.Shuffled:
+    print(f"Sizing monsters between {MinSize} and {MaxSize}")
+
 
 print("Generating files...")
 for filename in os.listdir(ImportPath):
@@ -101,7 +139,7 @@ for filename in os.listdir(ImportPath):
     if os.path.isfile(f):
         data = JsonHandler.ImportQuest(f)
         try:
-            data = RandomizeData(data, MonsterPlacement, QuestDetails, MonsterAmount, PostgameMonsters)
+            data = RandomizeData(data, MonsterPlacement, QuestDetails, MonsterAmount, PostgameMonsters, MinSize, MaxSize)
         except Exception as e:
             print(f"Skipping quest {data["QuestID"]} due to an error in generation")
         JsonHandler.ExportQuest(os.path.join(ExportPath, filename), data)

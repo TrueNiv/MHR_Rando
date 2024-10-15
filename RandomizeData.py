@@ -4,7 +4,7 @@ from Settings import RandoSettings
 from Values import MonsterIDs
 
 
-def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postgameMonsters):
+def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postgameMonsters, minsize, maxsize):
     enemyLevel = jsonData["QuestData"]["EnemyLevel"]
     questText = "Hunt:"
 
@@ -77,6 +77,11 @@ def RandomizeData(jsonData, monsterPlacement, questDetails, monsterAmount, postg
         jsonData["EnemyData"]["Monsters"][i]["HealthTable"] = jsonData["EnemyData"]["Monsters"][1]["HealthTable"]
         jsonData["EnemyData"]["Monsters"][i]["AttackTable"] = jsonData["EnemyData"]["Monsters"][1]["HealthTable"]
         jsonData["EnemyData"]["Monsters"][i]["StaminaTable"] = jsonData["EnemyData"]["Monsters"][1]["StaminaTable"]
+        jsonData["EnemyData"]["Monsters"][i]["SizeTable"] = 0
+        if minsize == 100 and maxsize == 100:
+            jsonData["EnemyData"]["Monsters"][i]["Size"] = 100
+        else:
+            jsonData["EnemyData"]["Monsters"][i]["Size"] = random.randrange(minsize, maxsize+1)
 
 
 

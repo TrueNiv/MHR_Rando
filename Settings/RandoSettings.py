@@ -27,3 +27,7 @@ class MonsterAmount(Enum):
 class InlcudePostgame(Enum):
     Include = 0
     Exclude = 1
+
+class SizeChanges(Enum):
+    Default = 0
+    Shuffled = 1
