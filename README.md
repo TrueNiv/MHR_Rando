@@ -1,7 +1,7 @@
 # Monster Hunter Rise Quest Rando
 
 This is a simple quest rando using the REFramework custom quest feature. The rando allows you to swap out the monsters in any given quest.
-**This is currently in beta. Please feel free to report crashes or bugs on this github. If you do report a bug, please attach a link to your quest file.**
+**This is currently in beta. A few monsters do not work correctly and there might be crashes!**
 
 Most of the info for custom quests was taken from the custom quest editor. You can find it here:
 https://github.com/Fexty12573/RiseQuestLoader
