@@ -15,4 +15,6 @@ Once you're done use the quest loader to export either all quests or just the on
 
 Next, select the settings you want to use. Once you're done the application will close and the output folder will be filled with questfiles of all the entered quests. These quests go into your Monster Hunter Rise installation under "MonsterHunterRise/reframework/quests". Next, take the spawn files in the SpawnFiles directory (or from the ZIP attached to the latest release) and put them into your Monster Hunter Rise installation under "MonsterHunterRise/reframework/quests/spawn/stage". These files are needed so that the monsters can spawn correctly in the changed terrain. 
 
+It's recommended to back up your save before playing this. Due to monster sizes being changed there is a possibility for otherwise impossible monster sizes, even when using the default setting. These stats would then be permanently reflected in your hunter card. Use at your own risk.
+
 Crashes are most likely connected to issues within the spawn file used for that quest. Should a mission repeatedly crash upon loading simply remove the questfile from your quests folder, play the vanilla quest and move on.
